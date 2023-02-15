@@ -1,0 +1,456 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'josefin', sans-serif;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+}
+.header{
+    width:100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* position: sticky; */
+    /* top: 0; */
+    background-image: linear-gradient(rgba(4,7,20,0.8),rgba(4,7,20,0.8)), url(images/tajhotel.jpg);
+}
+.nav{
+    display: flex;
+    padding: 2px 6px;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: #00000033;
+}
+.nav img{
+    width: 80px;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    display: inline-block;
+    padding: 8px 12px;
+    list-style: none;
+    position: relative; 
+}
+.nav-links ul li a{
+    color: white;
+    font-size: 16px;
+    font-weight: 900px;
+    text-decoration: none;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: red;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+.text-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    
+}
+@keyframes slideinleft{
+    from{
+        transform: translateX(-500px);
+
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+.text-box h1{
+    font-size: 62px;
+    font-weight: 1200px;
+    animation-name: slideinleft;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+
+    transform: translateX(0);
+}
+.text-box p{
+    margin: 50px 0 80px;
+    font-size: 25px;
+    color: white;
+    font-weight: 1000px;
+}
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    font-size: 20px;
+    border: 1px solid white;
+    color: white;
+    padding: 12px 24px;
+    background: transparent;
+    background-color: red ;
+    position: relative;
+    cursor: pointer;
+/* 
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+     */
+     transition: all 0.3s
+}
+.hero-btn:hover{
+    transform: translateX(-10px);
+    /* background-color: rgb(142, 182, 231); */
+    /* color: white; */
+}
+nav .fa{
+    display: none;
+}
+@media(max-width:900px){
+    .text-box h1{
+        font-size: 20px;
+    }
+    .text-box p{
+        font-size: 10px;
+    }
+    .nav-links ul li{
+        display:block;
+    }
+    .nav-links{
+        position: absolute;
+        background: red;
+         height: 100vh;
+        width: 200px;
+        top:0;
+        right: 0px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+    nav .fa{
+        display: block;
+        color: white;
+        margin: 10px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    .nav-links ul{
+        padding: 30px;
+
+    }
+}
+
+/*------ our suites----- */
+.suites{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+.h1{
+    font-size: 40px;
+    font-weight: 600;
+
+}
+.p{
+    color: #777;
+    font-size: 18px;
+    font-weight: 300px;
+    line-height: 22px;
+    padding: 10px;
+}
+.row{
+    display: flex;
+    margin-top: 5%;
+    justify-content: space-between;
+}
+.suites-col{
+    flex-basis: 31%;
+    background: #b4aaaa33;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 0;
+}
+.suites-col:hover{
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.3);
+}
+/* ----------our-rooms---- */
+
+.our-rooms{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.our-rooms-col{
+    flex-basis: 25%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+    margin: 0 3px 0;
+}
+.our-rooms-col img{
+    width: 100%;
+    height: 100%; 
+}
+.btn-2{
+    display: inline-block;
+    text-decoration: none;
+    margin: 20px 0;
+    font-size: 20px;
+    border: 1px solid white;
+    border-radius: 10px;
+    color: black;
+    padding: 12px 24px;
+    background: transparent;
+    /* background-color: red ; */
+    position: relative;
+    cursor: pointer;
+    border: 2px solid black;
+/* 
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+     */
+     /* transition: all 0.5s */
+}
+.btn-2:hover{
+    /* transform: translateY(-10px); */
+    background-color: red;
+    /* border: 2px solid black; */
+    /* color: white; */
+
+}
+/* ----our meals */
+.meals{
+    width: 40%;
+    margin: auto;
+    text-align: center;
+    padding-top: 20px;
+}
+.our-meals-row{
+    flex-basis: 60%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+    padding-top: 5px;
+    background-color: #f7f1f133;
+    /* opacity: 0.75; */
+}
+.our-meals-row img{
+    width: 30%;
+    height: 30%;
+}
+/* --------facilities---- */
+
+.Facilities{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+    margin: 5px 100px;
+}
+.facilities-col{
+    flex-basis: 33.3%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+    padding-top: 5px;
+}
+.facilities-col img{
+    width: 95%;
+    height: 90%;
+}
+    
+/* -------your future---- */
+
+.future{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+    margin: 5px 100px;
+}
+.future img{
+    width: 50%;
+    height: 50%;
+}
+.your-future-col{
+    flex-basis: 100%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+    padding-top: 20px;
+}
+.footer{
+    margin: 0.5rem 0 0.5;
+    font-size: 18px;
+    display: flex;
+    background-color: #99949433;
+}
+.footer1{
+    margin-left: 2rem ;
+    text-align: justify;
+}
+
+.footer2{
+    margin-left: 30rem ;
+    text-align: justify;
+}
+.footer a{
+    color: rgb(42, 42, 129);
+}
+
+
+.flex{
+    display: flex;
+}
+.flex-col {
+    flex-direction: column;
+}
+.items-center{
+    align-items: center;
+}
+.justify-center{
+    justify-content: center;
+}
+.justify-between{
+    justify-content: space-between;
+}
+.center{
+    text-align: center;
+}
+.hidden{
+    display: none;
+}
+.mb-1{
+    margin-bottom: 10px;
+}
+
+.mb-2{
+    margin-bottom: 20px;
+}
+.h-01 {
+    height: 1px;
+}
+.h-screen {
+    height: 99.4vh;
+}
+.w-4{
+    width: 40px;
+}
+.w-90{
+    width: 90%;
+}
+.w-100{
+    width: 100%;
+}
+
+.mx-1{
+    margin: 5px 0;
+}
+.px-1{
+    padding: 5px 0;
+}
+.p-1{
+    padding: 5px;
+}
+.px-2{
+    padding: 10px 0;
+}
+.px-3{
+    padding: 15px 0;
+}
+.py-1{
+    padding: 0 5px;
+}
+.py-2{
+    padding: 0 10px;
+}
+
+.bg-black {
+    background-color:red;
+    opacity:0.6
+}
+.bg-green{
+    background-color: blue;
+    opacity: 0.6;
+}
+.text-white{
+    color: white;
+}
+.underline-none {
+    text-decoration: none;
+}
+.bg-white{
+    background-color: white;
+}
+.border {
+    border: 0.75px solid black;
+}
+.round-xs{
+    border-radius: 3px;
+}
+.shadow{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.small{
+    font-size: 0.9rem;
+}
+
+.about-us .h1{
+    margin-left: 40rem;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="h-screen flex items-center justify-center">
+      <div class="center">
+        <h2 class="mb-2">HOTEL MUMBAI</h2>
+
+        <div class="w-100 p-1 bg-white round-xs shadow">
+          <p class="mb-1">Login to Hotel Mumbai</p>
+
+          <form action="index.html">
+            <div class="mb-1">
+              <label for="email_phone" class="hidden sr"
+                >Email address or phone number</label
+              >
+              <input
+                type="text"
+                id="email_phone"
+                placeholder="Email address or phone number"
+                required
+              />
+            </div>
+
+            <div class="mb-1">
+              <label for="password" class="hidden sr">Password</label>
+              <input
+                id="password"
+                type="password"
+                placeholder="password"
+                required
+              />
+            </div>
+
+            <div class="">
+              <button type="submit" class="w-100 round-xs bg-black text-white">login</button>
+            </div>
+          </form>
+
+          <div>
+            <a href="forgot.html" class="underline-none small">Forgot password?</a>
+
+            <div class="flex items-center justify-between px-1">
+              <div class="border h-01 w-90"></div>
+              <div class="w-4">or</div>
+              <div class="border h-01 w-90"></div>
+            </div>
+
+            <a href="sign-up.html" class="px-3 py-2 round-xs bg-green text-white underline-none small">Create Account</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
